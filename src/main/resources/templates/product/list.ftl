@@ -99,31 +99,31 @@
                                 </#if>
                             </#list>
                     <li class="disabled"><a href="#">...</a></li>
-                    <li ><a href="/sell/seller/order/list?page=${total}&size=${size}">${total}</a></li>
+                    <li ><a href="/sell/seller/product/list?page=${total}&size=${size}">${total}</a></li>
                         </#if>
                     <#--当前页大于4小于等于total-4-->
                         <#if (currentPage gte 5)&&(currentPage lt total-3)>
-                    <li ><a href="/sell/seller/order/list?page=1&size=${size}">1</a></li>
+                    <li ><a href="/sell/seller/product/list?page=1&size=${size}">1</a></li>
                     <li class="disabled"><a href="#">...</a></li>
                             <#list currentPage-2..currentPage+2 as index>
                                 <#if currentPage==index>
                              <li class="disabled"><a href="#">${index}</a></li>
                                 <#else>
-                              <li><a href="/sell/seller/order/list?page=${index}&size=${size}">${index}</a></li>
+                              <li><a href="/sell/seller/product/list?page=${index}&size=${size}">${index}</a></li>
                                 </#if>
                             </#list>
                     <li class="disabled"><a href="#">...</a></li>
-                    <li><a href="/sell/seller/order/list?page=${total}&size=${size}">${total}</a></li>
+                    <li><a href="/sell/seller/product/list?page=${total}&size=${size}">${total}</a></li>
                         </#if>
                     <#--当前页大于total-4-->
                         <#if currentPage gte total-3>
-                    <li ><a href="/sell/seller/order/list?page=1&size=${size}">1</a></li>
+                    <li ><a href="/sell/seller/product/list?page=1&size=${size}">1</a></li>
                     <li class="disabled"><a href="#">...</a></li>
                             <#list total-4..total as index>
                                 <#if currentPage==index>
                              <li class="disabled"><a href="#">${index}</a></li>
                                 <#else>
-                             <li><a href="/sell/seller/order/list?page=${index}&size=${size}">${index}</a></li>
+                             <li><a href="/sell/seller/product/list?page=${index}&size=${size}">${index}</a></li>
                                 </#if>
                             </#list>
 
@@ -132,7 +132,7 @@
                     <#if currentPage gte productInfoPage.getTotalPages()>
                     <li class="disabled"><a href="#">下一页</a></li>
                     <#else>
-                    <li ><a href="/sell/seller/order/list?page=${currentPage + 1}&size=${size}">下一页</a></li>
+                    <li ><a href="/sell/seller/product/list?page=${currentPage + 1}&size=${size}">下一页</a></li>
                     </#if>
                         </ul>
                     </div>
